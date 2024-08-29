@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIEX II</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #313B67;
+            background-size: cover;
+            background-position: center
+        }
+
+        header {
+            margin-top: 0;
+            background-color: #313B67;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-align: center;
+            width: 100%;
+            height: 20px;
+            padding-top: 1%;
+            padding-left: 10%;
+            padding-bottom: 1%;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        main {
+            margin-left: 24%;
+            padding: 2%;
+            background-color: #313B67;
+            background-position: center;
+            max-width: 80%;
+            height: 100%;
+            z-index: 500;
+        }
+
+        nav {
+            padding-left: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            word-spacing: 1;
+            color: #001365;
+        }
+
+        a {
+            color: #E7E7E7;
+            font-size: 1.15rem;
+            word-spacing: 1px;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #12414c;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #F24C00;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5rem;
+            color: #FC7A1E;
+            text-shadow: 2px 2px 4px #12414c;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            font-size: 2.2rem;
+            color: #FC7A1E;
+            text-shadow: 2px 2px 3px #12414c;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 3px #12414c;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 1px #12414c;
+        }
+
+        h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            font-size: 1rem;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 1px #12414c;
+        }
+
+        h6 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 0.8rem;
+            color: #FC7A1E;
+        }
+
+        hr {
+            color: #FC7A1E;
+        }
+
+        table {
+            margin-top: 5%;
+        }
+
+        ul {
+            list-style-type: square;
+            font-size: 1.15rem;
+            word-spacing: 1;
+            padding-left: 3%;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #313B67;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #5DFEF3;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            padding-top: 3px;
+            padding-left: 10%;
+            position: fixed;
+            z-index: 950;
+            bottom: 0;
+        }
+
+        #sidebar {
+            margin-top: 0;
+            padding: 2%;
+            background-color: #313B67;
+            max-width: 19%;
+            height: 100%;
+            position: fixed;
+            z-index: 1000;
+            color: #E7E7E7;
+        }
+
+        .noticia {
+            background: #F9C784;
+            width: 90%;
+            margin-top: 1%;
+            margin-left: 2%;
+            margin-bottom: 1%;
+            padding: 2%;
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            color: #313B67;
+            word-spacing: 2;
+            line-height: 2;
+            text-align: justify;
+            box-shadow: 2px 2px 4px #12414c;
+        }
+
+        .imagem-galeria {
+            width: 25%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 2%;
+            float: left;
+        }
+
+        .a1 {
+            font-weight: bold;
+            line-height: 1;
+            color: #E7E7E7;
+            list-style-type: square;
+            font-size: 1.8rem;
+            word-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .a2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 0.9rem;
+            word-spacing: 1px;
+            text-decoration: none;
+            line-height: 1.5;
+            color: #E7E7E7;
+            list-style-type: none;
+            list-style-position: inside;
+        }
+
+        .subsection {
+            padding-left: 2%;
+            padding-bottom: 2%;
+            margin-right: 4%;
+            margin-left: 10%;
+            margin-bottom: 5%;
+            background-color: #D4D5DD;
+        }
+    </style>
+</head>
+
+
+<header>
+    Análise e Desenvolvimento de Sistemas - CARLOS FREDERICO RIECK ZANDER - Projeto Integrado de Extensão II -
+    UNIDOMBOSCO
+</header>
+
+
+<body>
+    <sidebar id="sidebar">
+        <table>
+            <tr><br>
+                <h4 style="text-align: center; color: #FC7A1E;">NAVEGAÇÃO</h4><br>
+                <hr style="border: 1px solid #FC7A1E;">
+                <nav>
+                    <ul>
+                        <li class="a1"><a href="index.html">A CRISE DO PETRÓLEO:<br>O INÍCIO DE TUDO</a></li><br>
+                        <li class="a2"><a href="index.html">>&nbsp;O Clube de Roma</a></li>
+                        <li class="a2"><a href="index.html">>&nbsp;Urbanização</a></li>
+                        <li class="a2"><a href="index.html">>&nbsp;Desenvolvimento Sustentável</a></li>
+                    </ul>
+                </nav>
+            </tr>
+            <br>
+            <hr style="border: 1px solid #FC7A1E;"><br>
+            <tr>
+                <nav>
+                    <ul>
+                        <li class="a1"><a href="pag2.html">ODS: OS OBJETIVOS DE<br>DESENVOLVIIMENTO SUSTENTÁVEL</a></li>
+                        <br>
+                        <li class="a2"><a href="#ODS-ONU">>&nbsp;Os ODS</a></li>
+                        <li class="a2"><a href="#ambiente-sociedade">>&nbsp;Meio Ambiente e Sociedade</a></li>
+                        <li class="a2">
+                            <a href="#responsa-ambiental">>&nbsp;Responsabilidade
+                                Ambiental</a><br>&nbsp;&nbsp;&nbsp;LEED<br>&nbsp;&nbsp;&nbsp;AQUA<br>&nbsp;&nbsp;&nbsp;PROCEL-EDIFICA<br>&nbsp;&nbsp;&nbsp;FSC
+                        </li>
+                        <li class="a2"><a href="#responsa-social">>&nbsp;Responsabilidade
+                                Social</a><br>&nbsp;&nbsp;&nbsp;BALANÇO
+                            SOCIAL<br>&nbsp;&nbsp;&nbsp;SA8000<br>&nbsp;&nbsp;&nbsp;ABRINQ<br>&nbsp;&nbsp;&nbsp;ESG</li>
+                    </ul>
+                </nav>
+            </tr>
+        </table>
+    </sidebar>
+
+    <main>
+        <section id="ODS-ONU">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" src="imgs/onu.png" alt="LogoONU">
+                        <br><br><br><br>
+                        <h2>
+                            &nbsp;&nbsp;ODS - ONU<br>&nbsp;&nbsp;Os Objetivos
+                            de<br>&nbsp;&nbsp;Desenvolvimento<br>&nbsp;&nbsp;Sustentável
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            Em setembro de 2015, os 193 Estados-membros da <b>ONU</b> se comprometeram
+                            a adotar a <b>Agenda Pós-2015</b>. A Cúpula das Nações Unidas elaborou uma das agenda
+                            contendo os chamados <b>Objetivos de Desenvolvimento Sustentável (ODS)</b>. Tais ODS
+                            incorporam <b>um plano de ação global para eliminar pobreza extrema e fome, oferecer
+                                educação
+                                de qualidade para todos, proteger o planeta e promover sociedades pacíficas e
+                                inclusivas até 2030, estabelecendo compromissos das nações para com crianças e
+                                adolescentes nas áreas de pobreza, como também no tange à nutrição, saúde,
+                                educação, água e saneamento, e igualdade de gênero</b>.
+                        </p><br>
+                        <p>
+                            Neste trabalho, os dados levantados forneceram a base para as
+                            conclusões e para virtuais recomendações a fim de viabilizar às empresas o
+                            cumprimento da <b>meta 12.6</b> das <b>ODS</b>: <b>“INCENTIVAR AS EMPRESAS A ADOTAR PRÁTICAS
+                                SUSTENTÁVEIS E INTEGRAR INFORMAÇÕES DE SUSTENTABILIDADE EM SEU CICLO DE RELATÓRIOS”</b>
+                            <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank">(CLIQUE AQUI PARA VER O ODS 12
+                                EM NOVA JANELA)</a>.
+                        </p><br>
+                        <p>
+                            O <b>Desenvolvimento Sustentável</b> se apóia em 4 pilares: <b>ecologicamente
+                                correto, economicamente viável, socialmente justo, culturalmente aceito</b>.
+                            Dentro desse conceito, as empresas devem incorporar em seus processos produtivos as
+                            preocupações com sua <b>‘pegada ambiental’ (footprint)</b> nos processos de extração
+                            e compra de matérias primas, e da produção e comercialização do seus bens e/ou
+                            serviços. Mas, para além de tais abordagens, as empresas devem também cuidar do
+                            <b>meio social</b> no qual estão inseridas, respeitando suas peculiaridades sociais
+                            e culturais, de maneira a ser fator de manutenção, promoção, acolhimento e inclusão,
+                            numa relação de ganha-ganha, na qual todas as partes envolvidas obtêm benefícios
+                            mútuos e satisfatórios.
+                        </p><br>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="ambiente-sociedade">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 4px #12414c;" src="imgs/mamb.jpg"
+                            alt="imgCidade">
+                        <br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;MEIO AMBIENTE E SOCIEDADE</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>Segundo CAMARGO et al. (2001), as organizações privadas <b>socialmente
+                                responsáveis</b> adotam uma perspectiva que, além de buscar desempenho e
+                            lucratividade, incorporam a preocupação pelos <b>impactos sociais e ambientais</b> de suas
+                            operações. Seu propósito é contribuir para o <b>bem-estar geral e para o aprimoramento
+                                da qualidade de vida das comunidades</b>.
+                        </p><br>
+                        <p>Diversas são as ferramentas que as empresas podem utilizar no sentido de informar o
+                            público sobre a responsabilidade ambiental e social das suas ações. Como exemplos,
+                            <b>seguem elencadas abaixo</b> algumas das mais relevantes ferramentas, amplamente
+                            reconhecidas, e aplicáveis a variadas tipologias empresariais.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="responsa-ambiental">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;" src="imgs/respamb.jpg"
+                            alt="imgPolutionPic">
+                        <br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;RESPONSABILIDADE AMBIENTAL</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            As <b>certificações ambientais</b> alcançam diversas atividades econômicas. Na
+                            <b>Construção
+                                Civil</b>, a maior consumidora de recursos naturais e maior geradora de
+                            resíduos, alguns
+                            exemplos de certificações são: <b>LEED, AQUA, Procel Edifica</b>, entre outras.
+                        </p><br>
+                        <p>
+                            Serrador (2008) indica que <b>75% dos recursos naturais mundiais são consumidos pelo
+                                negócio da construção civil – gerando algo em torno de 500 kg / habitante.ano de
+                                resíduos</b> – e que os edifícios em funcionamento são responsáveis por cerca de
+                            <b>50% do consumo da energia elétrica e por 21% do consumo da água do planeta</b>.
+                        </p>
+                        <p>
+                            As <b>certificações ambientais</b> alcançam diversas atividades econômicas. Na
+                            <b>Construção
+                                Civil</b>, a maior consumidora de recursos naturais e maior geradora de
+                            resíduos, alguns
+                            exemplos de certificações são: <b>LEED, AQUA, Procel Edifica</b>, entre outras.
+                        </p><br>
+                        <p>
+                            Serrador (2008) indica que <b>75% dos recursos naturais mundiais são consumidos pelo
+                                negócio da construção civil – gerando algo em torno de 500 kg / habitante.ano de
+                                resíduos</b> – e que os edifícios em funcionamento são responsáveis por cerca de
+                            <b>50% do consumo da energia elétrica e por 21% do consumo da água do planeta</b>.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="leed" class="subsection">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" src="imgs/Leed-Logo.png" alt="imgPolutionPic">
+                        <br><br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;LEED</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            <b>Leadership in Energy and Environmental Design</b> é uma
+                            certificação internacional para edificações com o intuito de <b>incentivar a
+                                transformação dos projetos,
+                                obra e operação das edificações, com foco na sustentabilidade das
+                                atuações</b>, conferindo certificação nos níveis <b>Certificados LEED, LEED
+                                Silver, LEED Gold e LEED Platinum</b>, nas tipologias <b>Localização e
+                                Transporte, Espaço Sustentável, Eficiência do Uso da Água, Energia e
+                                Atmosfera, Materiais e Recursos, Qualidade Ambiental Interna, Inovação e
+                                Processos, e Créditos de Prioridade Regional</b>. (Green Building Council, 2024)
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" src="imgs/HQE.png" alt="LogoAQUA">
+                        <br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;AQUA - Alta Qualidade Ambiental&nbsp;/<br>&nbsp;&nbsp;HQE - Haute Qualité
+                            Environnementale</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            <b>AQUA-HQE™</b> é uma certificação internacional da construção de alta qualidade
+                            ambiental,
+                            desenvolvida a partir da renomada <b></b>certificação francesa HQE™</b> e aplicada no Brasil
+                            exclusivamente pela <b>Fundação Carlos Alberto Vanzolini</b>.
+                            Os requisitos da certificação foram contextualizados pela Fundação, em
+                            parceria com a USP, para agregar valor às construções e projetos no Brasil, <b>considerando
+                                aspectos culturais, do clima, das normas técnicas e regulamentações</b>.
+                            Seja edifício, planejamento urbano ou
+                            infraestrutura e em todas as fases de seu ciclo de vida, a certificação AQUA-HQE™ adota uma
+                            visão global <b>multitemática e multicritério que combina qualidade de vida, respeito ao
+                                meio
+                                ambiente, desempenho econômico e gestão e governança para um ambiente de vida
+                                sustentável,
+                                consistente com os Objetivos de Desenvolvimento Sustentável (ODS) das Nações Unidas.
+                                Compromissos:Qualidade de Vida, Respeito ao Meio Ambiente, Desempenho Econômico, e
+                                Gestão e
+                                Governança</b> (Fundação Vanzolini, 2024).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;"
+                            src="imgs/1530453950419.jpg" alt="LogoINMETRO">
+                        <br>
+                        <h3>&nbsp;&nbsp;Procel Edifica - INMETRO<br>&nbsp;&nbsp;PBE - Programa Brasileiro de Etiquetagem
+                        </h3><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            Em 2003, foi lançado o <b>PROCEL EDIFICA</b> para eficiência energética em
+                            edificações,
+                            atuando em várias vertentes e com diversas atividades de <b>incentivo à pesquisa,
+                                conscientização, incentivo ao uso racional de energia, desenvolvimento de
+                                mecanismos
+                                para diferenciação de mercado para edificações eficientes, disseminação de
+                                conceitos
+                                sobre eficiência energética por meio de publicações e implementando a lei de
+                                eficiência energética</b>. Tal programa abrange as edificações residenciais,
+                            comerciais
+                            de serviços e públicas (LEDUC, 2008). São levados em conta para a certificação o
+                            projeto e cálculo de consumo que podem levar a uma <b>economia de até 30% com
+                                iluminação, entre 10% e 20% com condicionamento de ar, e 10% com envoltória: área de
+                                vidro, fator solar do vidro, presença de sombreamento, etc</b>. (Programa
+                            Brasileiro de
+                            Etiquetagem)
+                        </p>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;" src="imgs/480.jpg"
+                            alt="LogoFSC">
+                        <br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;FSC<br>&nbsp;&nbsp;Forest Stewardship Council
+                        </h3><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            Como líder em <b>silvicultura sustentável</b>, o <b>Forest Stewardship Council (FSC)</b> é
+                            confiável por ONGs, empresas e consumidores em todo o mundo para <b>proteger florestas
+                                saudáveis e resilientes para todos, para sempre</b>. A certificação é apenas uma das
+                            maneiras pelas quais são colocados os padrões de silvicultura sustentável no centro dos
+                            trabalhos. Em parceria com um ecossistema diversificado de partes interessadas, desenvolvem
+                            novas soluções focadas em: <b>Fontes Responsáveis: Auxiliando as empresas a trabalharem com
+                                florestas de forma responsável. Conservação: Mantendo e aprimorando o valor das
+                                florestas. Restauração: Acelerando a recuperação florestal.</b> (Forest Stewardship
+                            Council, 2024).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="responsa-social">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;"
+                            src="imgs/FB_IMG_1724207224166.jpg" alt="imgPolutionPic">
+                        <br><br><br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;RESPONSABILIDADE SOCIAL</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            A Responsabilidade Social visa promover o crescimento do cidadão e incentivar, tanto a
+                            cidadania individual, quanto a coletiva. Seu enfoque ético-social está fundamentado na
+                            responsabilidade cívica. As iniciativas de Responsabilidade Social abrangem todos os atores
+                            na vida em comunidade - pessoas, autoridades, organizações empresariais, comunidades,
+                            movimentos sociais, organizações religiosas, partidos políticos e demais instituições (MELO
+                            NETO e FROES, 2001, p. 26–27.).
+                        </p><br>
+                        <p>
+                            A conscientização sobre os impactos ambientais e sociais levou o público consumidor a mudar
+                            sua forma de consumo, exigindo um posicionamento social das empresas e marcas. Dessa
+                            maneira, o marketing de relacionamento foi articulado com o marketing social. Hoje, para
+                            além de comprar apenas um produto, a relação de consumo busca criar identificação, conexão
+                            de valores e expectativas. Dessa forma, o marketing social se tornou indispensável para as
+                            empresas criarem novas formas de se comunicar e impactar na comunidade. (SERASA EXPERIAN).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="fsc" class="subsection">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;" src="imgs/cfc.png"
+                            alt="LogoFSC">
+                        <br><br><br><br>
+                        <h3>&nbsp;&nbsp;Balanço Social
+                        </h3><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            As empresas comprometidas com a Responsabilidade Social têm adotado o Balanço Social como
+                            uma ferramenta para comunicar suas iniciativas voltadas para colaboradores, comunidade e
+                            meio ambiente. Este relatório é publicado anualmente como uma maneira de evidenciar o
+                            envolvimento da empresa em questões sociais.
+                        </p><br>
+                        <p>
+                            De acordo com a Resolução do Conselho Federal de Contabilidade nº 1.003/04, todas as
+                            entidades, independente de porte, que querem demonstrar à sociedade a sua responsabilidade
+                            social, devem divulgar Informações de Natureza Social e Ambiental. Nenhuma empresa/entidade
+                            está obrigada a fazê-lo. Aquelas, porém, que optarem pela apresentação devem adotar as
+                            regras estabelecidas pela NBC T 15. Não compete ao CFC obrigar as empresas a elaborarem
+                            Demonstrações mas somente discipliná-las. De acordo com o item 1.5.1.3. da Resolução CFC nº
+                            1.003/04: “A Demonstração de Informações de Natureza Social e Ambiental, ora instituída,
+                            quando elaborada, deve evidenciar os dados e as informações de natureza social e ambiental
+                            da entidade, extraídos ou não da contabilidade, de acordo com os procedimentos determinados
+                            por esta norma”. (CONSELHO REGIONAL DE CONTABILIDADE PR).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;" src="imgs/OIP3.jpg"
+                            alt="Logo">
+                        <br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;Social Accountability 8000
+                        </h3><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            O Padrão SA8000 é o principal programa de certificação social do mundo. O Padrão
+                            SA8000 e o
+                            Sistema de Certificação fornecem um quadro para organizações de todos os tipos, em
+                            qualquer
+                            setor e em qualquer país, conduzirem seus negócios de maneira justa e decente para
+                            os
+                            trabalhadores e demonstrarem sua adesão aos mais altos padrões sociais. Criado pela
+                            SAI -
+                            Social Accountability International, Contabilidade Social Internacional, em
+                            português, em
+                            1997, como a primeira certificação social credível, ele tem liderado a indústria por
+                            mais de
+                            20 anos.
+                        </p><br>
+
+                        <p>
+                            O Padrão SA8000 é baseado em padrões internacionalmente reconhecidos de trabalho
+                            decente,
+                            incluindo a Declaração Universal dos Direitos Humanos, convenções da OIT e leis
+                            nacionais. O
+                            SA8000 adota uma abordagem de sistemas de gestão para desempenho social e enfatiza a
+                            melhoria contínua, não a auditoria baseada em lista de verificação: Trabalho
+                            Infantil,
+                            Trabalho Forçado ou Compulsório, Saúde e Segurança, Liberdade de Associação e
+                            Direito à
+                            Negociação Coletiva, Discriminação, Práticas Disciplinares, Horas de Trabalho,
+                            Remuneração,
+                            Sistema de Gestão. (Social Accountability International).
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;"
+                            src="imgs/Abrinq_Empresa_Amiga_da_Crianca.png" alt="Logo">
+                        <br><br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;Empresa Amiga da Criança
+                        </h3><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            O Programa Empresa Amiga da Criança, criado em 1995, tem por compromisso engajar o
+                            setor
+                            empresarial para o desenvolvimento de ações que impactem positivamente a vida de
+                            crianças e
+                            adolescentes no Brasil. A partir do sucesso no desenvolvimento destas ações, as
+                            empresas são
+                            reconhecidas como uma Empresa Amiga da Criança.
+                        </p><br>
+                        <p>
+                            A empresa ganha qualificação das práticas de responsabilidade social corporativa com
+                            um
+                            assessoramento técnico que aborda temáticas como ESG, ODS, monitoramento da cadeia
+                            produtiva, aprendizagem, voluntariado corporativo, investimento social privado,
+                            entre outros
+                            assuntos
+                        </p><br>
+                        <p>
+                            As empresas engajadas socialmente destacam-se perante a sociedade, segundo o
+                            relatório
+                            Eldeman Trust, 2023, 60% dos consumidores no Brasil consomem ou defendem a marca com
+                            base
+                            nos valores. Empresas participantes do programa têm o Selo Empresa Amiga da Criança
+                            para ser
+                            utilizado em seus materiais de comunicação como sites, embalagens, papelaria,
+                            produtos,
+                            entre outros. Este selo diz respeito à divulgação do compromisso da empresa com a
+                            causa da
+                            infância e adolescência no Brasil.
+                        </p><br>
+                        <p>
+                            As Empresas Amigas da Criança realizam ações com impacto positivo no seu entorno,
+                            estando
+                            alinhadas à agenda ESG, com foco especial para a letra S de Social, além de
+                            colaborarem
+                            diretamente com programas e projetos desenvolvidos pela Fundação Abrinq nas áreas da
+                            Educação, Saúde e Proteção, também relacionados aos Objetivos de Desenvolvimento
+                            Sustentável. (FUNDAÇÃO ABRINQ)
+                        </p>
+                    </td>
+                </tr>
+            </table>
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 3px #12414c;" src="imgs/OIP6.jpg"
+                            alt="Logo">
+                        <br><br><br><br><br>
+                        <h3>&nbsp;&nbsp;ESG<br>&nbsp;&nbsp;Environmental Social Governance</h3><br><br><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        De acordo com o site Pacto Global, o conceito <b>ESG,
+                            Environmental Social Governance, Governança Socioambiental, em português</b>,
+                        tem se
+                        destacado
+                        devido ao aumento do interesse do mercado financeiro em relação à sustentabilidade.
+                        Os
+                        aspectos ambientais, sociais e de governança agora são fundamentais nas avaliações
+                        de risco
+                        e nas decisões de investimento, exercendo uma grande pressão sobre as empresas. Esse
+                        fenômeno aparentemente novo tem levado as organizações a procurar compreender o
+                        significado
+                        do ESG e ajustar suas práticas para atender a essa nova demanda.
+                        </p><br>
+
+                        <h4 style="color: #313B67; text-shadow: none;">ÁREAS DE ATUAÇÃO:</h4>
+                        <h4 style="color: #313B67; text-shadow: none;">&nbsp;- Direitos humanos</h4>
+                        <ul style="color: #313B67; text-shadow: none;">
+                            <li>Respeitar e apoiar os direitos humanos reconhecidos internacionalmente na sua
+                                área de
+                                influência</li>
+                            <li>Assegurar a não participação da empresa em violações dos direitos humanos</li>
+                        </ul>
+                        </p><br>
+
+                        <h4 style="color: #313B67; text-shadow: none;">&nbsp;- Trabalho</h4>
+                        <ul style="color: #313B67; text-shadow: none;">
+                            <li>Apoiar a liberdade de associação e reconhecer o direito à negociação coletiva
+                            </li>
+                            <li>Eliminar todas as formas de trabalho forçado ou compulsório</li>
+                            <li>Erradicar todas as formas de trabalho infantil da sua cadeia produtiva</li>
+                            <li>Estimular práticas que eliminem qualquer tipo de discriminação no emprego</li>
+                        </ul>
+                        </p><br>
+
+                        <h4 style="color: #313B67; text-shadow: none;">&nbsp;- Meio ambiente</h4>
+                        <ul style="color: #313B67; text-shadow: none;">
+                            <li>Assumir práticas que adotem uma abordagem preventiva, responsável e proativa
+                                para os
+                                desafios ambientais</li>
+                            <li>Desenvolver iniciativas e práticas para promover e disseminar a responsabilidade
+                                socioambiental</li>
+                            <li>Incentivar o desenvolvimento e a difusão de tecnologias ambientalmente
+                                responsáveis</li>
+                        </ul>
+                        </p><br>
+
+                        <h4 style="color: #313B67; text-shadow: none;">Anticorrupção</h4>
+                        <ul style="color: #313B67; text-shadow: none;">
+                            <li>Combater a corrupção em todas as suas formas</li>
+                        </ul>
+                        </p><br>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+
+    <footer>
+        <h6>&copy; 2024 Carlos Frederico Rieck Zander - Todos os direitos reservados</h6>
+    </footer>
+
+</body>
+
+</html> 

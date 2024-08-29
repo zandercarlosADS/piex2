@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIEX II - HOME</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            background-color: #313B67;
+            background-size: cover;
+            background-position: center
+        }
+
+        header {
+            margin-top: 0;
+            background-color: #313B67;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-align: center;
+            width: 100%;
+            height: 20px;
+            padding-top: 1%;
+            padding-left: 10%;
+            padding-bottom: 1%;
+            position: fixed;
+            z-index: 1000;
+        }
+
+        main {
+            margin-left: 24%;
+            margin-bottom: 2%;
+            padding: 2%;
+            background-color: #313B67;
+            background-position: center;
+            max-width: 80%;
+            height: 100%;
+            z-index: 500;
+        }
+
+        nav {
+            padding-left: 2%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.4;
+            word-spacing: 1;
+            color: #001365;
+        }
+
+        a {
+            color: #E7E7E7;
+            font-size: 1.15rem;
+            word-spacing: 1px;
+            text-decoration: none;
+            text-shadow: 1px 1px 2px #12414c;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #F24C00;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5rem;
+            color: #FC7A1E;
+            text-shadow: 2px 2px 4px #12414c;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: left;
+            font-size: 2.2rem;
+            color: #FC7A1E;
+            text-shadow: 2px 2px 3px #12414c;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 3px #12414c;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 1px #12414c;
+        }
+
+        h5 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            font-size: 1rem;
+            color: #FC7A1E;
+            text-shadow: 1px 1px 1px #12414c;
+        }
+
+        h6 {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 0.8rem;
+            color: #FC7A1E;
+        }
+
+        hr {
+            color: #FC7A1E;
+        }
+
+        table {
+            margin-top: 5%;
+        }
+
+        ul {
+            list-style-type: square;
+            font-size: 1.15rem;
+            word-spacing: 1;
+            padding-left: 3%;
+            margin: 0;
+        }
+
+        footer {
+            background-color: #313B67;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #5DFEF3;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+            padding-top: 3px;
+            padding-left: 10%;
+            position: fixed;
+            z-index: 950;
+            bottom: 0;
+        }
+
+        #sidebar {
+            margin-top: 0;
+            padding: 2%;
+            background-color: #313B67;
+            max-width: 19%;
+            height: 100%;
+            position: fixed;
+            z-index: 1000;
+            color: #E7E7E7;
+        }
+
+        .noticia {
+            background: #F9C784;
+            width: 90%;
+            margin-top: 1%;
+            margin-left: 2%;
+            margin-bottom: 1%;
+            padding: 2%;
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.1rem;
+            color: #313B67;
+            word-spacing: 2;
+            line-height: 2;
+            text-align: justify;
+            box-shadow: 2px 2px 4px #12414c ;
+        }
+
+        .imagem-galeria {
+            width: 25%;
+            margin-top: 1%;
+            margin-bottom: 1%;
+            margin-left: 2%;
+            float: left;
+        }
+
+        .a1 {
+            font-weight: bold;
+            line-height: 1;
+            color: #E7E7E7;
+            list-style-type: square;
+            font-size: 1.8rem;
+            word-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .a2 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: lighter;
+            font-size: 0.9rem;
+            word-spacing: 1px;
+            text-decoration: none;
+            line-height: 1.5;
+            color: #E7E7E7;
+            list-style-type: none;
+            list-style-position: inside;
+        }
+
+        .subsection {
+            padding-left: 2%;
+            padding-bottom: 2%;
+            margin-right: 4%;
+            margin-left: 10%;
+            margin-bottom: 5%;
+            background-color: #D4D5DD;
+        }
+
+    </style>
+</head>
+
+
+<header>
+    Análise e Desenvolvimento de Sistemas - CARLOS FREDERICO RIECK ZANDER - Projeto Integrado de Extensão II -
+    UNIDOMBOSCO
+</header>
+
+
+<body>
+    <sidebar id="sidebar">
+        <table>
+            <tr><br>
+                <h4 style="text-align: center; color: #FC7A1E;">NAVEGAÇÃO</h4><br>
+                <nav>
+                    <ul>
+                        <li class="a1"><a href="index.html">A CRISE DO PETRÓLEO:<br>O INÍCIO DE TUDO</a></li><BR>
+                        <li class="a2"><a href="#clube-roma">>&nbsp;O Clube de Roma</a></li>
+                        <li class="a2"><a href="#urbano">>&nbsp;Urbanização</a></li>
+                        <li class="a2"><a href="#sustentabilidade">>&nbsp;Desenvolvimento Sustentável</a></li>
+                    </ul>
+                </nav>
+            </tr>
+            <br>
+            <hr style="border: 1px solid #FC7A1E;"><br>
+            <tr>
+                <nav>
+                    <ul>
+                        <li class="a1"><a href="pag2.html">ODS: OS OBJETIVOS DE<br>DESENVOLVIIMENTO SUSTENTÁVEL</a></li>
+                        <br>
+                        <li class="a2"><a href="pag2.html">>&nbsp;Os ODS</a></li>
+                        <li class="a2"><a href="pag2.html">>&nbsp;Meio Ambiente e Sociedade</a></li>
+                        <li class="a2"><a href="pag2.html">>&nbsp;Responsabilidade Ambiental</a></li>
+                        <li class="a2"><a href="pag2.html">>&nbsp;Responsabilidade Social</a></li>
+                    </ul>
+                </nav>
+            </tr>
+        </table>
+    </sidebar>
+
+    <main>
+        <section id="clube-roma">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 4px #000000;" src="imgs/_b3da526e-c0f8-4b9b-baed-80b1780ba58b.jpg"
+                            alt="imgPolutionPic">
+                        <br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;O CLUBE DE ROMA</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            A partir da <b>crise do petróleo</b>, na década de 1970, a preocupação com o meio
+                            ambiente começou a tomar força, época em que as atenções estavam dirigidas para a
+                            exploração
+                            excessiva dos recursos naturais. Foi nesse período que surgiu pela primeira vez o
+                            conceito
+                            de
+                            <b>Desenvolvimento Sustentável</b>, com o nome de <b>Ecodesenvolvimento</b>, para
+                            ser
+                            uma
+                            resposta à
+                            polarização do Clube de Roma, que foi protagonizada por dois grupos partidários com
+                            visões
+                            divergentes sobre a relação entre desenvolvimento econômico e meio ambiente.
+                        </p><br>
+                        <p>
+                            Diante de tal divergência, o relatório do Clube de Roma acabou por exacerbar a
+                            controvérsia
+                            quando
+                            apontou o <b>crescimento zero</b> como forma de evitar a catástrofe ambiental. Nesse
+                            contexto, o
+                            conceito de Ecodesenvolvimento surge como uma abordagem conciliadora, propondo que o
+                            progresso
+                            técnico relativizaria o limite ambiental mas, não o eliminaria, e que o crescimento
+                            econômico é
+                            condição necessária, mas não suficiente para, por si só, erradicar a pobreza e
+                            diminuir
+                            as
+                            desigualdades sociais (ROMEIRO, 1999).
+                        </p><br>
+                        <p>
+                            O passar do tempo vem favorecendo certa convergência entre as duas posições. O
+                            aumento
+                            da
+                            pressão do
+                            sistema econômico sobre o meio ambiente mostrou os efeitos contraditórios do
+                            progresso
+                            técnico e
+                            científico. De um lado a ameaça e o impacto ao meio ambiente tornaram-se mais claros
+                            e
+                            evidentes.
+                            Por outro lado, as previsões catastróficas do Clube de Roma se mostraram infundadas
+                            com
+                            o
+                            aumento da
+                            eficiência na prospecção e no uso dos recursos naturais, resultando na redução dos
+                            seus
+                            preços.
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="urbano">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 4px #000000;" src="imgs/_16dfebb4-6c9b-46d5-ab59-b0cdf5a388d7.jpg"
+                            alt="imgPolutionPic">
+                        <br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;URBANIZAÇÃO</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="noticia">
+                        <p>
+                            A <b>modernização agrícola</b> ocorrida no Brasil nas décadas de <b>1960 e 1970</b>
+                            aumentou o uso de maquinários na agricultura. Tal processo causou a <b>migração de
+                                milhões de pessoas do campo para as cidades</b> de tamanho médio – entre 100 mil
+                            e 500 mil habitantes, nas décadas de 1960 a 1980. A consequência foi o aceleramento
+                            do processo de urbanização (FERREIRA, 2002). Segundo a ONU, na América Latina,
+                            <b>mais de 70% da população já vive nas cidades</b>, o que havia sido previsto para
+                            acontecer apenas em 2030.
+                        </p><br>
+                        <p>
+                            Vivemos principalmente em <b>cidades</b>, que são espaços constituídos de seres
+                            humanos sociais que coexistem, desenvolvendo complexos relacionamentos
+                            econômicos. Para tanto, se faz necessário que
+                            atividades relacionadas à <b>engenharia</b> sejam desenvolvidas (ZMITROWICZ, 2002).
+                        </p><br>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section id="sustentabilidade">
+            <table class="shadow">
+                <tr>
+                    <td>
+                        <img class="imagem-galeria" style="box-shadow: 2px 2px 4px #000000;" src="imgs/poluteInPic.jpg" alt="imgPolutionPic">
+                        <br><br><br><br><br>
+                        <h2>&nbsp;&nbsp;DESENVOLVIMENTO<br>&nbsp;&nbsp;SUSTENTÁVEL</h2><br><br>
+                    </td>
+                </tr>
+                <td class="noticia">
+                    <p>
+                        Na década de <b>1980</b> o conceito de desenvolvimento sustentável foi expandido,
+                        abrangendo também
+                        a poluição pela <b>geração de resíduos</b>.<br><br>
+
+                        Em <b>1987</b>, aconteceu a <b>World Commission on Environment and Development – Comissão
+                            Mundial para o Meio Ambiente e Desenvolvimento</b> em português, também
+                        conhecida como Comissão Brundtland, em homenagem à sua presidente, a
+                        Primeira Ministra da Noruega Gro Harlem Brundtland. Neste evento, foi divulgado o relatório
+                        conhecido como <b>Our Common Future</b>, ou <b>Nosso Futuro Comum</b> em português.
+                        Esse relatório propôs que o <b>“Desenvolvimento Sustentável é aquele que atende às
+                            necessidades do presente, sem comprometer a possibilidade de as gerações futuras
+                            atenderem às suas próprias necessidades”</b> (CSILLAG, 2007).<br><br>
+
+                        Na década de <b>1990</b> a
+                        preocupação foi
+                        direcionada para a <b>emissão de CO2 e outros gases poluentes</b> liberados na
+                        atmosfera.<br><br>
+
+                        Já
+                        nos anos <b>2000</b>, a preocupação com o <b>aquecimento global</b> somou-se às
+                        anteriores e surgiu
+                        a preocupação com o impacto causado pelas edificações, fazendo surgir termos como
+                        <b>edifícios
+                            sustentáveis,eco-housing, symbiotic housing</b> (IZUMI, H. apud CSILLAG, 2007).
+                    </p><br>
+                </td>
+            </table>
+        </section>
+    </main>
+
+
+    <footer>
+        <h6>&copy; 2024 Carlos Frederico Rieck Zander - Todos os direitos reservados</h6>
+    </footer>
+</body>
+
+</html> 
